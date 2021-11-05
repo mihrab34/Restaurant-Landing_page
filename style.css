@@ -10,6 +10,7 @@
 
 nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     background-color: #252830;
     padding: 0.95em 2em;
@@ -39,7 +40,6 @@ nav ul li a {
 }
 
 .header-bg {
-    /* background-color: #55555555; */
     background-image: url('assets/restaurant.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,16 +60,18 @@ nav ul li a {
 }
 
 .text-container h1 {
-    font-weight: 100;
+    font-size: 3em;
+    font-weight: lighter;
     letter-spacing: 0.5px;
 }
 
 .text-container h2 {
-    font-size: 7.5em;
+    font-size: 8em;
     line-height: 1.2;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
+
 .container {
     position: absolute;
     left: 18em;
@@ -78,18 +80,130 @@ nav ul li a {
 
 .posts {
     display: flex;
-    
+    width: 50%;
+
+}
+
+.media img {
+    width: 250px;
 }
 
 .header-media {
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #fff;
     margin: 25px;
-    padding: 13px;
+    padding: 10px;
 }
 
 .media-post {
-    padding: 30px;
+    padding: 1.5em 2em 1em 2em;
     line-height: 2em;
+    font-size: 1.25em;
 }
 
+
+.price {
+    font-weight: 900;
+}
+
+.story-section {
+    background-color: rgb(201, 197, 193);
+    text-align: center;
+}
+
+.story {
+    padding-top: 10em;
+}
+
+.story-text {
+    max-width: 25%;
+    margin: 0 auto;
+}
+
+.story h1 {
+    text-transform: capitalize;
+    font-size: 2.7em;
+    font-weight: 100;
+    color: rgb(71, 70, 67);
+    padding: 1.5em;
+}
+
+.story p {
+    padding: 2.2em;
+    color: rgb(71, 70, 67);
+    letter-spacing: 0.5px;
+    line-height: 1.45em;
+    font-size: 1em;
+}
+
+.menu {
+    background-image: url('assets/checked_menu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 80vh;
+    position: relative;
+}
+
+.menu-text {
+    color: #fff;
+    position: relative;
+    left: 20em;
+    bottom: 26em;
+    z-index: 2;
+}
+
+.menu-text h1,
+h2 {
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .text-container {
+        text-align: center;
+        left: 0;
+        top: 5em;
+    }
+
+    .container {
+        left: 0;
+        top: 48em;
+    }
+
+    .media img {
+        width: 150px;
+    }
+
+    .header-media {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 440px) {
+    .text-container {
+        text-align: center;
+        left: 0;
+        top: 25em;
+        font-size: 0.35em;
+    }
+
+    .container {
+        left: 0;
+        top: 38em;
+    }
+
+
+    .posts {
+        flex-direction: column;
+    }
+
+    .media img {
+        width: 250px;
+    }
+
+
+    .header-media {
+        width: 200%;
+    }
+}
