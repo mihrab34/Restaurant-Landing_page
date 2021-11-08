@@ -199,15 +199,16 @@ h2 {
     align-content: center;
     gap: 5em;
     margin-top: em;
-    margin-left: 4em;
+    /* margin-left: 4em; */
 }
 
 .feature-post {
     width: 23%;
     padding-top: 2em 2em 2em 2em;
+    ;
 }
 
-.intro{
+.intro {
     margin-top: 10em;
 }
 
@@ -221,6 +222,32 @@ h2 {
     word-wrap: break-word;
     word-spacing: 0.25em;
 }
+
+.last-intro {
+    margin-bottom: 12em;
+}
+
+.reviews {
+    background-image: url(assets/bg21.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    text-align: center;
+}
+
+.fa-star {
+    color: yellow;
+    font-size: 1.5em;
+    margin-top: 12em;
+    padding-bottom: 2em;
+}
+
+.review-text {
+    color: #fff;
+    font-size: 1.65em;
+    line-height: 2em;
+}
+
 @media (max-width: 1024px) {
     .text-container {
         text-align: center;
