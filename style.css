@@ -12,7 +12,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #252830;
+    /* background-color: #252830; */
     padding: 0.95em 2em;
     position: fixed;
     width: 100%;
@@ -30,7 +30,8 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 0.9em;
+    font-size: 0.95em;
+    font-weight: bold;
     padding-top: 2.7em;
 }
 
@@ -142,7 +143,7 @@ nav ul li a {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 80vh;
+    min-height: 60vh;
     position: relative;
 }
 
@@ -150,15 +151,76 @@ nav ul li a {
     color: #fff;
     position: relative;
     left: 20em;
-    bottom: 26em;
+    top: -28em;
     z-index: 2;
 }
 
 .menu-text h1,
 h2 {
     text-transform: uppercase;
+    padding: 0.55em;
+    font-size: 3.5em;
+    line-height: 0.5em;
 }
 
+.menu-text h1 {
+    font-weight: 100;
+}
+
+.menu-text p {
+    padding: 1.3em;
+    font-size: 1em;
+}
+
+.menu-btn {
+    text-decoration: none;
+    background-color: rgb(240, 176, 57);
+    position: relative;
+    left: 15em;
+    bottom: 15em;
+    color: #fff;
+    padding: 0.5em 2em 0.5em 2em;
+    font-size: 1.5em;
+    border: 1px solid rgb(240, 176, 57);
+    border-radius: 10px;
+}
+
+.feature-section {
+    background-color: rgb(238, 235, 233);
+    margin-top: -18em;
+}
+
+.feature {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    gap: 5em;
+    margin-top: em;
+    margin-left: 4em;
+}
+
+.feature-post {
+    width: 23%;
+    padding-top: 2em 2em 2em 2em;
+}
+
+.intro{
+    margin-top: 10em;
+}
+
+.feature-post h2 {
+    font-size: 1em;
+}
+
+.feature-post p {
+    line-height: 1.5em;
+    font-size: 1.2em;
+    word-wrap: break-word;
+    word-spacing: 0.25em;
+}
 @media (max-width: 1024px) {
     .text-container {
         text-align: center;
