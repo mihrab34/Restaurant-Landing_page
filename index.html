@@ -10,70 +10,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
 <body>
     <div id="wrapper">
-        <nav>
-            <img src="assets/logo.png" alt="logo" width="100">
-            <ul>
-                <li><a href="#our-story">Our Story</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#book-table">Book a Table</a></li>
-                <i class="fas fa-ellipsis-h"></i>
-            </ul>
-        </nav>
         <header class="header-bg">
-            <div>
-                <div class="text-container">
-                    <h1>Because</h1>
-                    <h2> <b>you're <br> worth it</b></h2>
-                    <!-- <i class="fab fa-accessible-icon"></i> -->
-                </div>
-                <div class="container">
-                    <div class="posts">
-                        <div class="header-media">
-                            <div class="media">
-                                <img src="assets/chips.jpg" alt="chips">
+            <nav class="navbar">
+                <img src="assets/logo.png" alt="logo" width="100">
+                <ul class="nav-menu">
+                    <li><a href="#our-story" class="nav-link">Our Story</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#book-table" class="nav-link">Book a Table</a></li>
+                </ul>
+                <span class="hamburger"><i class="fas fa-ellipsis-h bar"></i></span>
+            </nav>
+            <section>
+                <div>
+                    <div class="text-container">
+                        <h1>Because</h1>
+                        <h2> <b>you're <br> worth it</b></h2>
+                        <!-- <i class="fab fa-accessible-icon"></i> -->
+                    </div>
+                    <div class="container">
+                        <div class="posts">
+                            <div class="header-media">
+                                <div class="media">
+                                    <img src="assets/chips.jpg" alt="chips">
+                                </div>
+                                <div class="media-post">
+                                    <p>Chips & Fish -</p>
+                                    <p class="price">$7.50</p>
+                                </div>
                             </div>
-                            <div class="media-post">
-                                <p>Chips & Fish -</p>
-                                <p class="price">$7.50</p>
+                            <div class="header-media">
+                                <div class="media">
+                                    <img src="assets/salad.jpg" alt="chips">
+                                </div>
+                                <div class="media-post">
+                                    <p>Chef Salad -</p>
+                                    <p class="price">$2.99</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="header-media">
-                            <div class="media">
-                                <img src="assets/salad.jpg" alt="chips">
+                            <div class="header-media">
+                                <div class="media">
+                                    <img src="assets/steak.jpg" alt="chips">
+                                </div>
+                                <div class="media-post">
+                                    <p>Grilled Steak -</p>
+                                    <p class="price">$14.99</p>
+                                </div>
                             </div>
-                            <div class="media-post">
-                                <p>Chef Salad -</p>
-                                <p class="price">$2.99</p>
-                            </div>
-                        </div>
-                        <div class="header-media">
-                            <div class="media">
-                                <img src="assets/steak.jpg" alt="chips">
-                            </div>
-                            <div class="media-post">
-                                <p>Grilled Steak -</p>
-                                <p class="price">$14.99</p>
-                            </div>
-                        </div>
-                        <div class="header-media">
-                            <div class="media">
-                                <img src="assets/chicken.jpg" alt="chips">
-                            </div>
-                            <div class="media-post">
-                                <p>Roast Chicken -</p>
-                                <p class="price">$9.99</p>
+                            <div class="header-media">
+                                <div class="media">
+                                    <img src="assets/chicken.jpg" alt="chips">
+                                </div>
+                                <div class="media-post">
+                                    <p>Roast Chicken -</p>
+                                    <p class="price">$9.99</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </header>
 
         <section class="story-section" id="our-story">
@@ -258,9 +260,24 @@
             </div>
         </section>
         <footer>
-            
+            <div>
+                <img src="assets/footer-logo.png" alt="logo">
+                <span>&copy; 2015 Select</span>
+                <p>Designed by Akintola Rahmat</p>
+            </div>
+            <div>
+                <span><i class="fab fa-twitter"></i></span>
+                <span><i class="fab fa-facebook-f"></i></span>
+                <span><i class="fas fa-basketball-ball"></i></span>
+                <span><i class="fab fa-behance"></i></span>
+                <span><i class="fab fa-google-plus-g"></i></span>
+                <span><i class="fab fa-linkedin-in"></i></span>
+                <span><i class="fas fa-camera-retro"></i></span>
+                <span><i class="fab fa-pinterest-square"></i></span>
+            </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

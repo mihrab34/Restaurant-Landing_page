@@ -8,42 +8,62 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
 }
 
 #wrapper {
     overflow: hidden;
 }
 
-nav {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 3em;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.7s ease-in-out;
+}
+
+.nav-menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: #252830; */
-    padding: 0.95em 2em;
-    position: fixed;
-    width: 100%;
-    min-height: 80;
-    z-index: 2;
-    /* transition: all 0.5s ease-in-out; */
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
     gap: 2.5em;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 0.95em;
-    font-weight: bold;
-    padding-top: 2.7em;
+.navbar.fixed {
+    background-color: #252830;
 }
 
-.fa-ellipsis-h {
+li {
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.99em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+.nav-link:hover {
     color: aqua;
-    font-size: 30px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    color: aqua;
+    font-size: 35px;
+    /* background-color: #252830; */
+    transition: all 0.3s ease-in-out;
+    margin: auto;
 }
 
 .header-bg {
@@ -51,25 +71,27 @@ nav ul li a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 150vh;
+    height: 150vh;
     position: relative;
 }
 
 .text-container {
     position: absolute;
     left: 15em;
-    top: 12em;
+    top: 13em;
     color: white;
-    z-index: 2;
-    padding: 5em;
+    z-index: 1;
+    /* padding: 5em; */
     text-align: left;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .text-container h1 {
-    font-size: 3em;
-    font-weight: lighter;
+    font-size: 4.5em;
+    font-weight: 100;
     letter-spacing: 0.5px;
+    line-height: 0;
+    padding-left: 1em;
 }
 
 .text-container h2 {
@@ -92,7 +114,7 @@ nav ul li a {
 }
 
 .media img {
-    width: 250px;
+    height: 20vh;
 }
 
 .header-media {
@@ -100,16 +122,19 @@ nav ul li a {
     background-color: #fff;
     margin: 25px;
     padding: 10px;
+    height: 40vh;
+    width: 100%;
 }
 
 .media-post {
     padding: 1.5em 2em 1em 2em;
     line-height: 2em;
-    font-size: 1.25em;
+    font-size: 1.35em;
+    font-family: 'Roboto', sans-serif;
 }
 
 
-.price {
+.media-post .price {
     font-weight: 900;
 }
 
@@ -150,6 +175,7 @@ nav ul li a {
     background-position: center;
     background-attachment: fixed;
     min-height: 60vh;
+    /* width: 100%; */
     position: relative;
 }
 
@@ -292,13 +318,13 @@ h2 {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .right-table {
     width: 22vw;
     margin-right: 12em;
-    margin-top: 20em;
+    margin-top: 10em;
     color: #fff;
     font-size: 1.1em;
     font-family: 'Roboto', sans-serif;
@@ -341,7 +367,7 @@ input:focus {
 
 .right-table p {
     padding-bottom: 1em;
-    line-height: 1.5em;
+    line-height: 1.9em;
 }
 
 .right-table i {
@@ -354,7 +380,7 @@ input:focus {
     color: #fff;
     border: rgb(240, 176, 57);
     border-radius: 10px;
-    margin-top: 2em;
+    margin: 2em;
     width: 35vw;
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
@@ -369,7 +395,138 @@ input:focus {
     background-color: rgb(185, 127, 19);
 }
 
-@media (max-width: 1024px) {
+footer {
+    background-color: #252830;
+    height: 20vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer i {
+    font-size: 1.95em;
+    color: gray;
+    padding: 0.45em;
+}
+
+footer i:hover {
+    color: #fff;
+}
+
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 1em 0.65em;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-menu {
+        left: 50%;
+        bottom: 3em;
+        flex-direction: column;
+        /* background-color: #252830; */
+        text-align: center;
+        transition: 0.3s;
+        width: 100;
+        border-radius: 10px;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active {
+        opacity: 0;
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hamburger.active {
+        color: aqua;
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .header-bg {
+        height: 300vh;
+    }
+
+    .text-container {
+        text-align: center;
+        left: 5em;
+        padding-top: 25em;
+        font-size: 0.45em;
+    }
+
+    .text-container h1 {
+        font-size: 7em;
+        font-weight: 700;
+        padding: 0;
+        text-align: center;
+    }
+
+    .text-container h2 {
+        font-size: 6em;
+        line-height: 1.2;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .container {
+        left: 0em;
+        top: 30em;
+    }
+
+    .posts {
+        flex-direction: column;
+    }
+
+    .media-post {
+        display: flex;
+        font-weight: 900;
+        padding: 2em;
+    }
+
+    .media img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .header-media {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        margin-bottom: 2.5em;
+    }
+
+    .story {
+        padding-top: 2.5em;
+    }
+
+    .story-text {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .story-section div>img {
+        padding-top: 2.5em;
+        width: 100%;
+    }
+
+    .menu {
+        /* width: 100%; */
+    }
+
+}
+
+/* @media (max-width: 1024px) {
     .text-container {
         text-align: center;
         left: 0;
@@ -388,32 +545,4 @@ input:focus {
     .header-media {
         margin: 10px;
     }
-}
-
-@media (max-width: 600px) {
-    .text-container {
-        text-align: center;
-        left: 0;
-        top: 25em;
-        font-size: 0.35em;
-    }
-
-    .container {
-        left: 0;
-        top: 38em;
-    }
-
-
-    .posts {
-        flex-direction: column;
-    }
-
-    .media img {
-        width: 250px;
-    }
-
-
-    .header-media {
-        width: 200%;
-    }
-}
+} */
