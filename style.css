@@ -16,11 +16,11 @@ html {
 }
 
 .navbar {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5em 3em;
-    position: fixed;
     width: 100%;
     background-color: transparent;
     transition: background-color 0.7s ease-in-out;
@@ -59,11 +59,11 @@ li {
 
 .bar {
     display: block;
-    color: aqua;
-    font-size: 35px;
-    /* background-color: #252830; */
+    background-color: aqua;
+    width: 25px;
+    height: 3px;
     transition: all 0.3s ease-in-out;
-    margin: auto;
+    margin: 5px auto;
 }
 
 .header-bg {
@@ -80,7 +80,7 @@ li {
     left: 15em;
     top: 13em;
     color: white;
-    z-index: 1;
+    z-index: 2;
     /* padding: 5em; */
     text-align: left;
     font-family: 'Roboto', sans-serif;
@@ -171,20 +171,34 @@ li {
 .menu {
     background-image: url('assets/checked_menu.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto auto;
     background-position: center;
     background-attachment: fixed;
-    min-height: 60vh;
-    /* width: 100%; */
+    height: 60vh;
     position: relative;
 }
 
 .menu-text {
     color: #fff;
     position: relative;
-    left: 20em;
-    top: -28em;
+    left: 10em;
+    top: 8em;
     z-index: 2;
+    text-align: left;
+}
+
+.menu-img{
+    display: none;
+    position: relative;
+    left: 70em;
+    bottom: 23.5em;
+    height: 57vh;
+    z-index: 2;
+    transition: 0.07s ease-in;
+}
+
+.menu-img.active{
+    display: block;
 }
 
 .menu-text h1,
@@ -205,21 +219,19 @@ h2 {
 }
 
 .menu-btn {
-    text-decoration: none;
     background-color: rgb(240, 176, 57);
-    position: relative;
-    left: 15em;
-    bottom: 15em;
     color: #fff;
     padding: 0.5em 2em 0.5em 2em;
     font-size: 1.5em;
     border: 1px solid rgb(240, 176, 57);
     border-radius: 10px;
+    cursor: pointer;
+    margin: 2em 3em;
 }
 
 .feature-section {
     background-color: rgb(216, 210, 205);
-    margin-top: -18em;
+    /* margin-top: -28em; */
 }
 
 .feature {
@@ -230,8 +242,6 @@ h2 {
     justify-content: center;
     align-content: center;
     gap: 5em;
-    margin-top: em;
-    /* margin-left: 4em; */
 }
 
 .feature-post {
@@ -283,6 +293,7 @@ h2 {
 .customer-section {
     padding: 9em;
     background: url(assets/bg5.jpg);
+    background-size: auto 100%;
 }
 
 .customers {
@@ -414,6 +425,7 @@ footer i:hover {
     color: #fff;
 }
 
+/* media query */
 
 @media (max-width: 700px) {
     .navbar {
@@ -423,14 +435,21 @@ footer i:hover {
     }
 
     .nav-menu {
-        left: 50%;
-        bottom: 3em;
+        position: fixed;
+        left: -100%;
+        top: 3em;
         flex-direction: column;
-        /* background-color: #252830; */
+        background-color: #252830;
         text-align: center;
         transition: 0.3s;
-        width: 100;
+        width: 100%;
         border-radius: 10px;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        gap: 0;
+    }
+
+    .nav-menu li {
+        margin: 0.9em 1em;
     }
 
     .nav-menu.active {
@@ -442,14 +461,17 @@ footer i:hover {
         cursor: pointer;
     }
 
-    .hamburger.active {
+    .hamburger.active .bar:nth-child(1) {
         opacity: 0;
-        transform: translateY(-8px) rotate(-45deg);
     }
 
-    .hamburger.active {
+    .hamburger.active .bar:nth-child(2) {
+        transform: translateY(0px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
         color: aqua;
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .header-bg {
@@ -458,7 +480,7 @@ footer i:hover {
 
     .text-container {
         text-align: center;
-        left: 5em;
+        left: 7.5em;
         padding-top: 25em;
         font-size: 0.45em;
     }
@@ -520,8 +542,86 @@ footer i:hover {
         width: 100%;
     }
 
-    .menu {
-        /* width: 100%; */
+    .menu-text {
+        text-align: center;
+        left: 0;
+        padding-top: 2.5em;
+    }
+
+    .menu-text h1 {
+        font-weight: 500;
+        font-size: 2.5em;
+        padding-bottom: 0em;
+    }
+
+    .menu-text h2 {
+        font-weight: 900;
+        font-size: 2.2em;
+        line-height: 1.2em;
+    }
+
+    .menu-text div>p{
+        font-weight: 900;
+        padding-top: 3em;
+    }
+
+    /* .menu-btn {
+        margin: 0 auto;
+        left: 2.7em;
+        bottom: 16.5em;
+    } */
+
+    .feature-section {
+        margin-top: -26em;
+    }
+
+    .feature {
+        text-align: center;
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 2em;
+    }
+
+    .feature-post {
+        width: 100%;
+    }
+
+    .feature-post h2 {
+        font-size: 1.2em;
+        padding: 0.75em;
+    }
+
+    .feature-post:nth-child(4){
+        margin-top: 8em;
+    }
+
+    .reviews {
+        background-size: auto 50%;
+        height: 100vh;
+        margin-bottom: -23em;
+    }
+
+    .fa-star {
+        margin-top: 3em;
+        margin-bottom: -2em;
+        
+    }
+
+    .review-text {
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 1em;
+    }
+
+    .customer-section {
+
+    }
+
+    .customers{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 0;
+        gap: 5em;
     }
 
 }
