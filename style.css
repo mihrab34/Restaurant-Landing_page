@@ -194,7 +194,7 @@ li {
     bottom: 23.5em;
     height: 57vh;
     z-index: 2;
-    transition: 0.07s ease-in;
+    transition: 0.7s ease-in;
 }
 
 .menu-img.active{
