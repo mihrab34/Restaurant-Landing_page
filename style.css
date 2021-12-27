@@ -429,7 +429,7 @@ footer i:hover {
 
 /* media query */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .navbar {
         padding: 1em 0.65em;
         align-items: flex-start;
@@ -481,8 +481,10 @@ footer i:hover {
     }
 
     .text-container {
+        inline-size: 250px;
         text-align: center;
-        left: 25%;
+        left: 20%;
+        top: 0;
         padding-top: 24em;
         font-size: 4vw;
     }
@@ -491,22 +493,29 @@ footer i:hover {
         font-size: 10vw;
         font-weight: 700;
         padding: 0;
-        text-align: center;
+        letter-spacing: 0.25em;
+        line-height: 1.5em;
     }
 
     .text-container h2 {
         font-size: 9.5vw;
-        line-height: 1.2;
-        text-align: center;
+        line-height: 1.2em;
+        letter-spacing: 0.25em;
         font-weight: 600;
+        padding: 0;
     }
 
     .container {
         left: 0em;
         top: 50em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 15em;
     }
 
     .posts {
+        width: 70%;
         flex-direction: column;
     }
 
@@ -523,9 +532,9 @@ footer i:hover {
 
 
     .header-media {
-        width: 100vw;
+        width: 100%;
         height: auto;
-        margin: 0;
+        margin: auto;
         margin-bottom: 2.5em;
     }
 
@@ -554,7 +563,6 @@ footer i:hover {
         text-align: center;
         left: 0;
         padding-top: 2.5em;
-
     }
 
     .menu-text h1 {
@@ -600,21 +608,21 @@ footer i:hover {
 
     .reviews {
         background-size: auto 100%;
-        height: 50vh;
+        min-height: 50vh;
         text-align: center;
     }
 
     .fa-star {
-        margin-top: 4em;
+        margin-top: 7em;
         margin-bottom: -1em;
 
     }
 
     .review-text {
-        inline-size: 350px;
+        inline-size: 400px;
         font-size: 4.3vw;
         font-weight: 600;
-        padding: 0.45em;
+        padding: 0.3em;
     }
 
     .customers {
@@ -633,7 +641,7 @@ footer i:hover {
 
     .left-table {
         margin-top: -4em;
-        text-align :left;
+        text-align: left;
     }
 
     .left-table button {
@@ -658,7 +666,7 @@ footer i:hover {
         min-height: 35vh;
     }
 
-    footer > .copyright {
+    footer>.copyright {
         padding-top: 3em;
         padding-bottom: 1.5em;
     }
@@ -673,50 +681,156 @@ footer i:hover {
 
 }
 
- @media screen and (max-width: 1200px)  {
-        .navbar {
-            padding: 1em 0.65em;
-            align-items: flex-start;
-            width: 100%;
-        }
+@media screen and (min-width: 700px) and (max-width : 1200px) {
+    .navbar {
+        padding: 1em 0.65em;
+        align-items: flex-start;
+        width: 100%;
+    }
 
-        .nav-menu {
-            position: fixed;
-            left: -100%;
-            top: 3em;
-            flex-direction: column;
-            background-color: #252830;
-            text-align: center;
-            transition: 0.3s;
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-            gap: 0;
-        }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 3em;
+        flex-direction: column;
+        background-color: #252830;
+        text-align: center;
+        transition: 0.3s;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        gap: 0;
+    }
 
-        .nav-menu li {
-            margin: 0.9em 1em;
-        }
+    .nav-menu li {
+        margin: 0.9em 1em;
+    }
 
-        .nav-menu.active {
-            left: 0;
-        }
+    .nav-menu.active {
+        left: 0;
+    }
 
-        .hamburger {
-            display: block;
-            cursor: pointer;
-        }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
 
-        .hamburger.active .bar:nth-child(1) {
-            opacity: 0;
-        }
+    .hamburger.active .bar:nth-child(1) {
+        opacity: 0;
+    }
 
-        .hamburger.active .bar:nth-child(2) {
-            transform: translateY(0px) rotate(45deg);
-        }
+    .hamburger.active .bar:nth-child(2) {
+        transform: translateY(0px) rotate(45deg);
+    }
 
-        .hamburger.active .bar:nth-child(3) {
-            color: aqua;
-            transform: translateY(-8px) rotate(-45deg);
-        }
-   }
+    .hamburger.active .bar:nth-child(3) {
+        color: aqua;
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .header-bg {
+        min-height: 200vh;
+    }
+
+    .text-container {
+        text-align: left;
+        left: 5%;
+        top: 6em;
+        padding-top: 5.5em;
+        font-size: 4vw;
+
+
+    }
+
+    .text-container h1 {
+        font-size: 10vw;
+        font-weight: 700;
+        letter-spacing: 0.35em;
+        padding: 0;
+        line-height: 1.5em;
+    }
+
+    .text-container h2 {
+        font-size: 10vw;
+        line-height: 1.2em;
+        letter-spacing: 0.3em;
+        font-weight: 600;
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        left: 0;
+        top: 50em;
+        padding-top: 10em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .posts {
+        width: 100%;
+        flex-direction: row;
+        gap: 0.95em;
+    }
+
+    .media-post {
+        font-weight: 900;
+        padding: 2em;
+    }
+
+    .media img {
+        width: 100%;
+        height: 20vh;
+    }
+
+
+    .header-media {
+        width: 100%;
+        min-height: 50vh;
+        margin: 0;
+    }
+
+    .story {
+        padding-top: 3em;
+    }
+
+    .story-text {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .story-section div>img {
+        padding-top: 2.5em;
+        padding-bottom: 3em;
+        width: 100%;
+    }
+
+    .menu-text {
+        top: 3em;
+        text-align: center;
+        left: 0;
+        padding-top: 1.5em;
+    }
+
+    .fa-star {
+        margin-top: 10em;
+        margin-bottom: -1em;
+    }
+
+    .review-text {
+        inline-size: 650px;
+        font-size: 3vw;
+        font-weight: 600;
+        padding: 0.45em;
+    }
+
+    .customers {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2 1fr);
+        grid-row-gap: 3em;
+        margin: 0 auto;
+        align-content: center;
+        justify-content: center;
+    }
+}
