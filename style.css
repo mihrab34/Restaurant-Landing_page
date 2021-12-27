@@ -826,11 +826,28 @@ footer i:hover {
     }
 
     .customers {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2 1fr);
         grid-row-gap: 3em;
         margin: 0 auto;
         align-content: center;
-        justify-content: center;
+        justify-content: space-around;
+    }
+
+    .left-table {
+        margin-top: -4em;
+        text-align: left;
+        padding: 0.5em;
+    }
+
+    hr {
+        width: 85%;
+    }
+
+    .right-table {
+        width: 100%;
+        margin: 1em;
+        text-align: left;
+        padding: 1.5em;
     }
 }
