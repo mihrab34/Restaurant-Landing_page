@@ -95,6 +95,7 @@ li {
 }
 
 .text-container h2 {
+    inline-size: 850px;
     font-size: 8em;
     line-height: 1.2;
     letter-spacing: 0.5px;
@@ -498,6 +499,7 @@ footer i:hover {
     }
 
     .text-container h2 {
+        inline-size: 270px;
         font-size: 9.5vw;
         line-height: 1.2em;
         letter-spacing: 0.25em;
@@ -751,7 +753,8 @@ footer i:hover {
     }
 
     .text-container h2 {
-        font-size: 10vw;
+        inline-size: 600px;
+        font-size: 9vw;
         line-height: 1.2em;
         letter-spacing: 0.3em;
         font-weight: 600;
