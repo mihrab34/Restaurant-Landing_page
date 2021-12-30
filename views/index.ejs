@@ -1,36 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-</head>
+<%- include('./partials/head.ejs') %> 
 
 <body>
     <div id="wrapper">
         <header class="header-bg">
-            <nav class="navbar">
-                <img src="assets/logo.png" alt="logo" width="100">
-                <ul class="nav-menu">
-                    <li><a href="#our-story" class="nav-link">Our Story</a></li>
-                    <li><a href="#menu" class="nav-link">Menu</a></li>
-                    <li><a href="#features" class="nav-link">Features</a></li>
-                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                    <li><a href="#book-table" class="nav-link">Book a Table</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+            <%- include('./partials/nav.ejs') %> 
             <section>
                 <div>
                     <div class="text-container">
@@ -238,7 +214,7 @@
             <div class="left-table">
                 <h2>Book a Table</h2>
                 <hr>
-                <form action="">
+                <form action="" class="table-form">
 
                     <input type="text" id="name" placeholder="Full name">
                     <hr>
@@ -264,22 +240,7 @@
 
             </div>
         </section>
-        <footer>
-            <div class="copyright">
-                <img src="assets/footer-logo.png" alt="logo">
-                <p><span>&copy; 2015 Select</span> <br> Designed by Akintola Rahmat</p>
-            </div>
-            <div>
-                <span><i class="fab fa-twitter"></i></span>
-                <span><i class="fab fa-facebook-f"></i></span>
-                <span><i class="fas fa-basketball-ball"></i></span>
-                <span><i class="fab fa-behance"></i></span>
-                <span><i class="fab fa-google-plus-g"></i></span>
-                <span><i class="fab fa-linkedin-in"></i></span>
-                <span><i class="fas fa-camera-retro"></i></span>
-                <span><i class="fab fa-pinterest-square"></i></span>
-            </div>
-        </footer>
+        <%- include('./partials/footer.ejs') %> 
     </div>
     <script src="script.js"></script>
 </body>

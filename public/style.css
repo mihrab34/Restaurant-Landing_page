@@ -11,6 +11,27 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+.review-form {
+    width: 50%;
+    position: relative;
+    background-color: aqua;
+    margin: 3em auto;
+    text-align: center;
+}
+
+.review-form>input {
+    position: absolute;
+    top: 5em;
+    left: 17.5em;
+    padding: 1em 8em;
+    border: 1px solid #252830;
+    font-size: 0.9em;
+}
+
+.text-review {
+    margin: 10em;
+}
+
 #wrapper {
     overflow: hidden;
 }
@@ -361,7 +382,7 @@ hr {
     text-transform: none;
 }
 
-input {
+.table-form>input {
     margin: 1.5em;
     padding: 1em 1em 1em 0;
     background-color: transparent;
