@@ -11,26 +11,59 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
-.review-form {
-    width: 50%;
-    position: relative;
-    background-color: aqua;
-    margin: 3em auto;
+#review-form {
     text-align: center;
+    padding: 1em;
+}
+.form-container{
+    width: 35%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(225, 225, 225, 1) 51%, rgba(246, 246, 246, 1) 100%);
+    margin: 0 auto;
+    padding: 5em;
+    text-align: left;
+    font-family: 'Roboto',sans-serif;
 }
 
-.review-form>input {
-    position: absolute;
-    top: 5em;
-    left: 17.5em;
-    padding: 1em 8em;
-    border: 1px solid #252830;
-    font-size: 0.9em;
+.form-group {
+    margin: 1em;
 }
 
-.text-review {
-    margin: 10em;
+.form-group > input {
+    width: 440px;
+    padding: 1.5em;
+    border-radius: 5px;
+    color: #000;
 }
+
+.form-group > input:focus {
+    outline: none;
+    color: #000;
+    font-size: 1em;
+    box-shadow: #252830;
+}
+
+.form-group > textarea {
+    padding: 0.95em;
+    border-radius: 5px;
+    color: #000;
+    font-size:1em;
+    border: 2px solid #252830;
+    box-shadow: #252830;
+}
+
+.form-btn {
+    background-color: rgb(240, 176, 57);
+    padding: 1em 4em;
+    border: 1px solid rgb(185, 127, 19);
+    box-shadow: rgb(240, 176, 57);
+    color: #fff;
+    margin: 1.5em 6em;
+    border-radius: 8px;
+    font-size:1.3em;
+    font-weight: 600;
+}
+
+
 
 #wrapper {
     overflow: hidden;
