@@ -14,39 +14,53 @@ html {
 #review-form {
     text-align: center;
     padding: 1em;
+    margin-top: 5em;
 }
-.form-container{
-    width: 35%;
+
+.comments { 
+    width: 50%;
+    inline-size: 500px;
+    color:#252830;
+    background-color: red;
+    /* margin: 20em; */
+}
+
+.form-container {
+    width: 50%;
     background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(225, 225, 225, 1) 51%, rgba(246, 246, 246, 1) 100%);
     margin: 0 auto;
     padding: 5em;
     text-align: left;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header>.navbar {
+    background-color: #252830;
 }
 
 .form-group {
-    margin: 1em;
+    margin: 1em 11em;
 }
 
-.form-group > input {
+.form-group>input {
     width: 440px;
     padding: 1.5em;
     border-radius: 5px;
     color: #000;
 }
 
-.form-group > input:focus {
+.form-group>input:focus {
     outline: none;
     color: #000;
     font-size: 1em;
     box-shadow: #252830;
 }
 
-.form-group > textarea {
+.form-group>textarea {
     padding: 0.95em;
     border-radius: 5px;
     color: #000;
-    font-size:1em;
+    font-size: 1em;
     border: 2px solid #252830;
     box-shadow: #252830;
 }
@@ -57,9 +71,9 @@ html {
     border: 1px solid rgb(185, 127, 19);
     box-shadow: rgb(240, 176, 57);
     color: #fff;
-    margin: 1.5em 6em;
+    margin: 1.5em 12em;
     border-radius: 8px;
-    font-size:1.3em;
+    font-size: 1.3em;
     font-weight: 600;
 }
 

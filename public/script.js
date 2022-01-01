@@ -50,5 +50,3 @@ menuBtn.addEventListener('click', () => {
     menuImg.classList.toggle("active");
 });
 
-
-// sticky top
