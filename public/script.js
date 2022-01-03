@@ -6,6 +6,20 @@ $(window).scroll(function(){
     }
 });
 
+// window.onscroll = function(){mySticky()};
+
+// let navbar  = document.querySelector(".navbar");
+// let sticky = navbar.offsetTop;
+
+// function mySticky(){
+//     if(window.pageYOffset > sticky){
+//         navbar.className.add("sticky");
+//     } else {
+//         navbar.className.remove("sticky");
+//     }
+// }
+
+
 // const scroller = document.querySelector('.nav');
 
 // window.onscroll = function(){

@@ -45,6 +45,9 @@ app.post("/create", async (req, res) => {
     // return;
     //  res.send("<h1>Review sent Successfully</h1>");
     res.redirect("/");
+    // res.render("/", (err, html) => {
+    //   res.send("<h1>Review sent Successfully</h1>")
+    // })
   });
 });
 
