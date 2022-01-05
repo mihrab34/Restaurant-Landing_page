@@ -29,10 +29,12 @@ app.use('/', indexRoute);
 app.use("/review", reviewRoute);
 
 
-// app.get('/', (req, res) => {
-//     res.render('index');
-// })
+// Feedback after form submission
+app.get('/feedback', (req, res) => {
+    res.render('feedback', {title: 'Feedback'});
+})
 
+//  create and save each form details
 app.post("/create", async (req, res) => {
   const user_details = {
     fullname: req.body.fullname,
@@ -44,7 +46,7 @@ app.post("/create", async (req, res) => {
     if (err) throw err;
     // return;
     //  res.send("<h1>Review sent Successfully</h1>");
-    res.redirect("/");
+    res.redirect("/feedback");
     // res.render("/", (err, html) => {
     //   res.send("<h1>Review sent Successfully</h1>")
     // })
@@ -61,6 +63,7 @@ app.get("/api/reviews", (req, res) => {
   });
 });
 
+// render reviews page
 app.get("/about", (req, res) => {
   res.render("show_reviews", { title: "Testimonials" });
 });
