@@ -15,7 +15,7 @@ html {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     justify-content: center;
     background: url(assets/bg21.jpg);
@@ -30,7 +30,7 @@ html {
 }
 
 .comment-text {
-    display: none;
+    /* display: none; */
     width: 100%;
     height: 20vh;
     margin: auto;
@@ -158,6 +158,10 @@ html {
 .feedback {
     text-align: center;
     padding: 60px;
+}
+
+.feedback > h1 {
+    line-height: 2em
 }
 
 /* Main page */
