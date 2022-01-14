@@ -10,3 +10,4 @@ let count = setInterval(() => {
         window.location = '/';
     }
 }, 1000)
+

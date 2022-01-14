@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+
+<body>
+    <div>
+        <header class="header">
+            <%- include('../partials/nav.ejs') %>
+        </header>
+
+
+        <section>
+            <div class="about-content">
+            <a href="/menus/add">Add Menu</a>
+                <% if (typeof menus != 'undefined') {  %>
+                <% menus.forEach((menu) => { %>
+                <div class="comment-text">
+                    <h1><%= menu.name %> </h1>
+                    <h3>Price:<%= menu.price %> </h3>
+                    <h3><%= menu.status %> </h3>
+                    <p><%= menu.remarks %> </p>
+                    <a href="/edit/<%= menu._id %> ">Edit Menu</a>
+                    <a href="/orders/add/<%= menu._id %> ">Place Order</a>
+                </div>
+
+                <% }) %>
+                <% } %>
+            </div>
+        </section>
+        <br>
+
+        <%- include('../partials/footer.ejs') %>
+    </div>
+</body>
+
+</html>

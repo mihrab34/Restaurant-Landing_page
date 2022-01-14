@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+
+<body>
+    <div>
+        <header class="header">
+            <%- include('../partials/nav.ejs') %>
+        </header>
+        <h1 id="review-form">Add Menu</h1>
+        <form action="/menus/addMenu" method="post" class="form-container">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Enter Menu Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="price" placeholder="Enter Price">
+            </div>
+            <div class="form-group">
+                <select name="status" id="status" placeholder="Select Status">
+                    <option value="Available">Available</option>
+                    <option value="Not Available">Not Available</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea name="remarks" cols="50" rows="10" placeholder="Remarks"></textarea>
+            </div>
+
+            <button type="submit" value="Submit" class="form-btn">Send</button>
+        </form>
+        <%- include('../partials/footer.ejs') %>
+    </div>
+</body>
+</html>

@@ -14,9 +14,9 @@
                 <% if (typeof comments != 'undefined') {  %>
                 <% comments.forEach((comment) => { %>
                 <div class="comment-text">
-                    <p><%- comment.message %> </p>
-                    <p><%- comment.fullname %> </p>
-                    <a href="/about<%- comment._id %> ">Edit</a>
+                    <p><%= comment.message %> </p>
+                    <p><%= comment.fullname %> </p>
+                    <a href="/edit/<%= comment._id %> ">Edit</a>
                 </div>
 
                 <% }) %>

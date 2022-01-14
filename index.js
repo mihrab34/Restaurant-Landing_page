@@ -1,9 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const indexRoute = require("./routes/index");
-const reviewRoute = require("./routes/review");
+const reviewRoute = require("./routes/reviewRoutes");
+const orderRoute = require("./routes/orderRoutes");
+const menuRoute = require("./routes/menuRoutes");
 const Reviews = require("./model/reviewdb");
-const Menus = require("./model/menudb");
+// const Menus = require("./model/Menu");
 const cors = require("cors");
 require("dotenv").config();
 
@@ -30,13 +32,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use("/", indexRoute);
 app.use("/review", reviewRoute);
+app.use("/orders", orderRoute); 
+app.use("/menus", menuRoute);
 
-// Feedback after form submission
+// Review controller and Routes
+// Feedback after review form submission
 app.get("/feedback", (req, res) => {
   res.render("feedback", { title: "Feedback" });
 });
 
-//  create and save each form details
+//  create or save each review form details
 app.post("/create", async (req, res) => {
   const user_details = {
     fullname: req.body.fullname,
@@ -47,6 +52,16 @@ app.post("/create", async (req, res) => {
   user.save((err) => {
     if (err) throw err;
     res.redirect("/feedback");
+  });
+});
+
+// render show reviews page
+app.get("/about", (req, res) => {
+  Reviews.find({}, (err, comments) => {
+    if (err) throw err;
+    if (comments) {
+      res.render("show_reviews", { title: "Testimonials", comments });
+    }
   });
 });
 
@@ -67,7 +82,7 @@ app.post("/create", async (req, res) => {
 
 // edit reviews posted
 app.get("/edit/:_id", (req, res) => {
-  let id = new mongoose.Types.ObjectId(req.params._id);
+  let id = req.params._id;
   Reviews.findById( id, (err, comment) => {
     if (err) {
       throw err;
@@ -78,22 +93,6 @@ app.get("/edit/:_id", (req, res) => {
   });
 });
 
-// render reviews page
-app.get("/about", (req, res) => {
-  Reviews.find({}, (err, comments) => {
-    if (err) throw err;
-    if (comments) {
-      res.render("show_reviews", { title: "Testimonials", comments });
-    }
-  });
-});
 
-// get menus
-app.get('/menus', (req, res)=> {
-
-})
-
-
-
-
+// listen to server changes
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
