@@ -215,7 +215,7 @@ li {
 }
 
 .header-bg {
-    background-image: url('assets/restaurant.jpg');
+    background-image: url('../assets/restaurant.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -318,7 +318,7 @@ li {
 }
 
 .menu {
-    background-image: url('assets/checked_menu.jpg');
+    background-image: url('../assets/checked_menu.jpg');
     background-repeat: no-repeat;
     background-size: auto auto;
     background-position: center;
@@ -419,7 +419,7 @@ h2 {
 }
 
 .reviews {
-    background-image: url(assets/bg21.jpg);
+    background-image: url(../assets/bg21.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 80vh;
@@ -443,7 +443,7 @@ h2 {
 
 .customer-section {
     padding: 9em;
-    background: url(assets/bg5.jpg);
+    background: url(../assets/bg5.jpg);
     background-size: auto 100%;
 }
 
@@ -476,7 +476,7 @@ h2 {
 }
 
 .table {
-    background-image: url(assets/bg36.jpg);
+    background-image: url(../assets/bg36.jpg);
     height: 100%;
     display: flex;
     align-items: center;
