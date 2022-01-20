@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head.ejs') %>
+<%- include('../partials/head.ejs') %>
 
 <body>
     <div>
         <header class="header">
-            <%- include('./partials/nav.ejs') %>
+            <%- include('../partials/nav.ejs') %>
         </header>
 
 
@@ -13,9 +13,9 @@
             <div class="about-content">
                 <% if (typeof comments != 'undefined') {  %>
                 <% comments.forEach((comment) => { %>
-                <div class="comment-text">
+                <div class="comment-text fade">
                     <p><%= comment.message %> </p>
-                    <p><%= comment.fullname %> </p>
+                    <i><%= comment.fullname %> </i><br>
                     <a href="/edit/<%= comment._id %> ">Edit</a>
                 </div>
 
@@ -27,8 +27,6 @@
         <!-- Next/prev buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <%- include('./partials/footer.ejs') %>
     </div>
     <script src="JS/about.js"></script>
 </body>
