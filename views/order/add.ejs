@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('../partials/head.ejs') %>
 <body>
+    <header class="header">
+        <%- include('../partials/nav.ejs') %>
+    </header>
     <h1>Place Orders</h1>
     <form action="/orders/add/<%= menu._id %> " method="post" class="form-container">
         <label for="">Customer Name
@@ -22,7 +20,7 @@
         <button type="submit" value="Submit" class="form-btn">Submit</button>
     </form>
 
-    <h2>Order Details</h2>
+    <h3>Order Details</h3>
     <p>Menu: <%= menu.name %></p> 
     <p>Price: <%= menu.price %></p>
     <p>Remarks: <%= menu.remarks %></p>
